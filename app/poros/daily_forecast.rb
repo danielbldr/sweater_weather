@@ -1,7 +1,6 @@
 class DailyForecast
   include Convertable
   attr_reader :current_temp,
-              :time,
               :high,
               :low,
               :description,
@@ -14,7 +13,6 @@ class DailyForecast
 
   def initialize(data)
     @current_temp = data[:current][:temp]
-    @time = current_time(data[:current][:dt])
     @high = data[:daily].first[:temp][:max]
     @low = data[:daily].first[:temp][:min]
     @description = data[:current][:weather].first[:description]

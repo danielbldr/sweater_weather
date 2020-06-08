@@ -9,7 +9,6 @@ RSpec.describe DailyForecast do
     daily_forecast = DailyForecast.new(forecast_info)
 
     expect(daily_forecast.current_temp).to eq(79.48)
-    expect(daily_forecast.time).to eq("09:26 PM, Jun 07")
     expect(daily_forecast.high).to eq(79.48)
     expect(daily_forecast.low).to eq(76.39)
     expect(daily_forecast.description).to eq('clear sky')
