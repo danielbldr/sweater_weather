@@ -21,14 +21,19 @@ class Api::V1::FoodieController < ApplicationController
                                                              coords[:lng])
 
     conn = Faraday.new(url: 'https://developers.zomato.com') do |f|
-      f.headers[:key] = ENV['ZOMATO_API']
+      f.headers['user-key'] = ENV['ZOMATO_API']
     end
 
     response = conn.get('/api/v2.1/search') do |req|
       req.params[:lat] = coords[:lat]
-      req.params[:lon] = coords[:lon]
-      req.params[:q] = coords[:search]
+      req.params[:lon] = coords[:lng]
+      req.params[:q] = params[:search]
     end
+
+    restaurants = JSON.parse(response.body, symbolize_names: true)
+
+    name = restaurants[:restaurants].first[:restaurant][:name]
+    address = restaurants[:restaurants].first[:restaurant][:location][:address]
     require "pry"; binding.pry
   end
 end
