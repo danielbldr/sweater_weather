@@ -11,5 +11,13 @@ class Api::V1::FoodieController < ApplicationController
 
     directions = JSON.parse(response.body, symbolize_names: true)
     time = directions[:routes].first[:legs].first[:duration][:text]
+    end_location = params[:end]
+
+    geocode_service = GeocodeService.new
+    coords = geocode_service.get_coordinates(params[:end])
+
+    forecast_results = ForecastResults.new
+    forecast_summary = forecast_results.get_forecast_summary(coords[:lat],
+                                                             coords[:lng])
   end
 end
