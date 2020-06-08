@@ -26,6 +26,7 @@ gem 'puma', '~> 3.7'
 # gem 'rack-cors'
 gem 'fast_jsonapi'
 gem 'faraday'
+gem 'figaro'
 
 
 group :development, :test do
