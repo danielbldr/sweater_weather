@@ -19,5 +19,16 @@ class Api::V1::FoodieController < ApplicationController
     forecast_results = ForecastResults.new
     forecast_summary = forecast_results.get_forecast_summary(coords[:lat],
                                                              coords[:lng])
+
+    conn = Faraday.new(url: 'https://developers.zomato.com') do |f|
+      f.headers[:key] = ENV['ZOMATO_API']
+    end
+
+    response = conn.get('/api/v2.1/search') do |req|
+      req.params[:lat] = coords[:lat]
+      req.params[:lon] = coords[:lon]
+      req.params[:q] = coords[:search]
+    end
+    require "pry"; binding.pry
   end
 end
