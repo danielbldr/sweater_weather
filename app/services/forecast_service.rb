@@ -1,6 +1,6 @@
-class WeatherService
-  def get_forecast_info
-    params = { lat: '39.7392', lon: '-104.9903', unit: 'imperial'}
+class ForecastService
+  def get_forecast_info(lat, lon)
+    params = { lat: lat, lon: lon, units: 'imperial'}
     get_json('data/2.5/onecall', params)
   end
 
