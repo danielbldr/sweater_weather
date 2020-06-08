@@ -11,6 +11,9 @@ RSpec.describe "Forecast Endpoints" do
     expect(weather_attributes).to have_key(:hourly)
     expect(weather_attributes).to have_key(:seven_day)
     expect(weather_attributes).to have_key(:daily)
+    expect(weather_attributes).to have_key(:location)
+
+    expect(weather_attributes[:location]).to eq('America/Denver')
 
     expect(weather_attributes[:hourly].count).to eq(8)
     expect(weather_attributes[:seven_day].count).to eq(7)

@@ -1,21 +1,26 @@
 class CityForecast
-  attr_reader :hourly_forcast, :five_day_forecast, :daily_forecast
+  include Convertable
+  attr_reader :hourly, :seven_day, :daily, :id, :location
 
-  def initialize(json_info)
-    @hourly_forecast = create_hourly_forcast(json_info[:hourly])
-    @five_day_forecast = create_five_day_forecast(json_info[:daily])
-    @daily_forecast = DailyForecast.new(json_info)
+  def initialize(data)
+    @location = data[:timezone]
+    @hourly = create_hourly_forcast(data[:hourly])
+    @seven_day = create_seven_day_forecast(data[:daily])
+    @daily = DailyForecast.new(data)
+    @id = 1
   end
 
-  def create_hourly_forcast(hourly_info)
-    @hourly_forcast ||= hourly_info[0..7].map do |hour|
+  private
+
+  def create_hourly_forcast(hourly_data)
+    hourly_data[0..7].map do |hour|
       HourlyForecast.new(hour)
     end
   end
 
-  def create_five_day_forecast(daily_info)
-    @five_day_forecast ||= daily_info[0..4].map do |day|
-      FiveDayForecast.new(day)
+  def create_seven_day_forecast(daily_data)
+    daily_data[0..6].map do |day|
+      SevenDayForecast.new(day)
     end
   end
 end
