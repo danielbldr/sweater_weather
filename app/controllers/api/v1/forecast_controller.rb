@@ -1,10 +1,12 @@
 class Api::V1::ForecastController < ApplicationController
   def index
-    # weather_service = WeatherService.new
-    # response = weather_service.get_forecast_info
-    weather_results = WeatherResults.new
-    response = weather_results.get_local_weather
+    geocode_service = GeocodeService.new
+    coords = geocode_service.get_coordinates(params[:location])
 
-    render json: response.body
+    forecast_results = ForecastResults.new
+    city_forecast = forecast_results.get_local_weather(coords[:lat],
+                                                       coords[:lng])
+
+    render json: ForecastSerializer.new(city_forecast).serializable_hash
   end
 end
