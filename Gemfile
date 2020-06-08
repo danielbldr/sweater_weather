@@ -27,6 +27,7 @@ gem 'puma', '~> 3.7'
 gem 'fast_jsonapi'
 gem 'faraday'
 gem 'figaro'
+gem 'unsplash'
 
 
 group :development, :test do
