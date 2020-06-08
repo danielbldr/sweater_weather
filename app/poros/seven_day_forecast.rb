@@ -1,5 +1,6 @@
 class SevenDayForecast
   include Convertable
+  attr_reader :description, :precipitation, :high, :low, :day
 
   def initialize(json_info)
     @description = json_info[:weather].first[:main]
