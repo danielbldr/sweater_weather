@@ -1,7 +1,9 @@
 class HourlyForecast
-  def initialize(json_info)
-    @time = json_info[:dt]
-    @current_temp = json_info[:temp]
-    @description = json_info[:weather].first[:main]
+  include Convertable
+
+  def initialize(data)
+    @time = current_time(data[:dt])
+    @current_temp = data[:temp]
+    @description = data[:weather].first[:main]
   end
 end
