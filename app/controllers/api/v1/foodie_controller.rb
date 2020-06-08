@@ -34,6 +34,12 @@ class Api::V1::FoodieController < ApplicationController
 
     name = restaurants[:restaurants].first[:restaurant][:name]
     address = restaurants[:restaurants].first[:restaurant][:location][:address]
-    require "pry"; binding.pry
+
+    params = {end_location: end_location,
+              travel_time: time,
+              forecast: forecast_summary,
+              restaurant: { name: name, address: address }}
+    foodie = Foodie.new(params)
+    render json: FoodieSerializer.new(foodie).serializable_hash
   end
 end
