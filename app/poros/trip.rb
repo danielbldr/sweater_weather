@@ -4,8 +4,8 @@ class Trip
   def initialize(params)
     @origin = params[:origin]
     @destination = params[:destination]
-    @travel_time = get_travel_time(params)
-    @arrival_forecast = get_forecast(params)
+    @travel_time = get_travel_time(params).travel_time
+    @arrival_forecast = get_forecast(params, get_travel_time(params).seconds)
     @id = nil
   end
 
@@ -21,9 +21,9 @@ class Trip
     geocode_service.get_coordinates(params[:destination])
   end
 
-  def get_forecast(params)
+  def get_forecast(params, time)
     coords = get_coords(params)
     forecast_results = ForecastResults.new
-    forecast_results.get_forecast_summary(coords[:lat], coords[:lng])
+    forecast_results.get_forecast_summary(coords[:lat], coords[:lng], time)
   end
 end
