@@ -1,6 +1,4 @@
 class Api::V1::RoadTripController < ApplicationController
-  before_action :authenticate_api_key
-
   def create
     return error unless authenticate_api_key
 
