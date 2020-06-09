@@ -8,9 +8,9 @@ class ForecastResults
     CityForecast.new(response)
   end
 
-  def get_forecast_summary(lat, lon)
+  def get_forecast_summary(lat, lon, time)
     forecast_service = ForecastService.new
-    response = forecast_service.get_forecast_info(lat, lon)
+    response = forecast_service.get_arrival_forecast(lat, lon, time)
     ForecastSummary.new(response)
   end
 end
