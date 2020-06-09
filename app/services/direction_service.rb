@@ -2,8 +2,7 @@ class DirectionService
   def get_travel_time(origin, destination)
     params = { origin: origin, destination: destination }
     directions = get_json('/maps/api/directions/json', params)
-
-    directions[:routes].first[:legs].first[:duration][:text]
+    Direction.new(directions)
   end
 
   private

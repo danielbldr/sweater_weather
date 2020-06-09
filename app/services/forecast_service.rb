@@ -1,7 +1,15 @@
 class ForecastService
+  include Convertable
+
   def get_forecast_info(lat, lon)
     params = { lat: lat, lon: lon, units: 'imperial' }
     get_json('data/2.5/onecall', params)
+  end
+
+  def get_arrival_forecast(lat, lon, time)
+    forecast_info = get_forecast_info(lat, lon)
+    index = to_hours(time)
+    forecast_info[:hourly][index]
   end
 
   private

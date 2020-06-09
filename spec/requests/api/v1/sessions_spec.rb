@@ -23,7 +23,9 @@ RSpec.describe "Session Endpoints" do
     post '/api/v1/users', params: create_params
     post '/api/v1/sessions', params: sessions_params
 
-    expect(response).to be_successful
+    expect(response).to_not be_successful
+    expect(response.status).to eq(400)
+    
     user_data = JSON.parse(response.body, symbolize_names: true)
 
     expect(user_data[:password]).to eq(["Invalid password"])
@@ -37,7 +39,9 @@ RSpec.describe "Session Endpoints" do
     post '/api/v1/users', params: create_params
     post '/api/v1/sessions', params: sessions_params
 
-    expect(response).to be_successful
+    expect(response).to_not be_successful
+    expect(response.status).to eq(400)
+
     user_data = JSON.parse(response.body, symbolize_names: true)
 
     expect(user_data[:email]).to eq(["Invalid email address"])

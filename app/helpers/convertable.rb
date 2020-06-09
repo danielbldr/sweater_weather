@@ -20,4 +20,8 @@ module Convertable
     time = Time.zone.at(unix_time)
     time.strftime('%I:%M %p')
   end
+
+  def to_hours(seconds)
+    ((seconds / 60).to_f / 60).round
+  end
 end
