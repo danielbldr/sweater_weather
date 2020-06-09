@@ -6,7 +6,7 @@ RSpec.describe ForecastSummary do
     forecast_info = JSON.parse(data, symbolize_names: true)
     forecast_info = JSON.parse(forecast_info, symbolize_names: true)
 
-    trip = ForecastSummary.new(forecast_info)
+    trip = ForecastSummary.new(forecast_info[:current])
 
     expect(trip.summary).to_not be_blank
     expect(trip.temperature).to_not be_blank
