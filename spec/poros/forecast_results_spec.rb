@@ -11,4 +11,11 @@ RSpec.describe ForecastResults do
 
     expect(city_forecast.class).to eq(CityForecast)
   end
+
+  it 'can get forecast summary' do
+    forecast_results = ForecastResults.new
+    forecast_summary = forecast_results.get_forecast_summary(39.74, -104.99)
+
+    expect(forecast_summary.class).to eq(ForecastSummary)
+  end
 end
