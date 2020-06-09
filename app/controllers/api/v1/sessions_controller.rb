@@ -15,9 +15,9 @@ class Api::V1::SessionsController < ApplicationController
 
   def error(error = 'password')
     if error == 'password'
-      render json: { password: ['Invalid password'] }
+      render json: { password: ['Invalid password'] }, status: 400
     else
-      render json: { email: ['Invalid email address'] }
+      render json: { email: ['Invalid email address'] }, status: 400
     end
   end
 end
