@@ -18,4 +18,8 @@ RSpec.describe Convertable do
   it 'can convert unix time to current time' do
     expect(to_time(1591724885)).to eq('11:48 AM')
   end
+
+  it 'can convert seconds to closet hour' do
+    expect(to_hours(6479)).to eq(2)
+  end
 end
