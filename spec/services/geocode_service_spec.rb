@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe GeocodeService do
-  it 'can get coordinates of a city' do
+  it 'can get coordinates of a city', :vcr do
     goecode_service = GeocodeService.new
     coords = goecode_service.get_coordinates('denver,co')
 
@@ -9,7 +9,7 @@ RSpec.describe GeocodeService do
     expect(coords[:lng]).to eq(-104.990251)
   end
 
-  it 'can get coordinates of a different city' do
+  it 'can get coordinates of a different city', :vcr do
     goecode_service = GeocodeService.new
     coords = goecode_service.get_coordinates('irvine,co')
 

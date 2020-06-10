@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe "Background Endpoints" do
-  it "can retreive url for background image" do
+  it "can retreive url for background image", :vcr do
     get '/api/v1/backgrounds?location=denver,co'
 
     expect(response).to be_successful

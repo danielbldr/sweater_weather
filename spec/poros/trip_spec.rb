@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Trip do
-  it 'has attributes' do
+  it 'has attributes', :vcr do
     trip = Trip.new({ origin: 'denver,co', destination: 'pueblo,co' })
 
     expect(trip.origin).to eq('denver,co')
