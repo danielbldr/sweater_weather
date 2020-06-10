@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe DirectionService do
-  it 'can get coordinates of a city' do
+  it 'can get coordinates of a city', :vcr do
     direction_service = DirectionService.new
     time = direction_service.get_travel_time('denver,co', 'pueblo,co')
 
@@ -9,7 +9,7 @@ RSpec.describe DirectionService do
     expect(time.seconds).to eq(6479)
   end
 
-  it 'can get coordinates of a different city' do
+  it 'can get coordinates of a different city', :vcr do
     direction_service = DirectionService.new
     time = direction_service.get_travel_time('denver,co', 'irvine,co')
 

@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe ForecastResults do
-  it 'can get local weather data' do
+  it 'can get local weather data', :vcr do
     data = File.read('lib/mock/denver_forecast.json')
     forecast_info = JSON.parse(data, symbolize_names: true)
     forecast_info = JSON.parse(forecast_info, symbolize_names: true)
@@ -12,7 +12,7 @@ RSpec.describe ForecastResults do
     expect(city_forecast.class).to eq(CityForecast)
   end
 
-  it 'can get forecast summary' do
+  it 'can get forecast summary', :vcr do
     forecast_results = ForecastResults.new
     forecast_summary = forecast_results.get_forecast_summary(39.74, -104.99, 600)
 
