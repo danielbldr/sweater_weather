@@ -14,7 +14,7 @@ class GeocodeService
 
   def conn
     Faraday.new(url: 'https://maps.googleapis.com') do |f|
-      f.params[:key] = ENV['GOOGLE_API']
+      f.params['key'] = ENV['GOOGLE_API']
     end
   end
 end

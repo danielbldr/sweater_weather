@@ -21,7 +21,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Sun, 14 Jun 2020 15:26:21 GMT
+      - Sun, 14 Jun 2020 15:32:11 GMT
       Pragma:
       - no-cache
       Expires:
@@ -41,7 +41,7 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       Server-Timing:
-      - gfet4t7; dur=18
+      - gfet4t7; dur=21
       Alt-Svc:
       - h3-27=":443"; ma=2592000,h3-25=":443"; ma=2592000,h3-T050=":443"; ma=2592000,h3-Q050=":443";
         ma=2592000,h3-Q049=":443"; ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443";
@@ -110,7 +110,7 @@ http_interactions:
            ],
            "status" : "OK"
         }
-  recorded_at: Sun, 14 Jun 2020 15:26:21 GMT
+  recorded_at: Sun, 14 Jun 2020 15:32:11 GMT
 - request:
     method: get
     uri: https://api.openweathermap.org/data/2.5/onecall?appid=<OPEN_WEATHER_API>&lat=39.7392358&lon=-104.990251&units=imperial
@@ -132,7 +132,7 @@ http_interactions:
       Server:
       - openresty
       Date:
-      - Sun, 14 Jun 2020 15:26:22 GMT
+      - Sun, 14 Jun 2020 15:32:12 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -149,7 +149,7 @@ http_interactions:
       - GET, POST
     body:
       encoding: UTF-8
-      string: '{"lat":39.74,"lon":-104.99,"timezone":"America/Denver","timezone_offset":-21600,"current":{"dt":1592148315,"sunrise":1592134287,"sunset":1592188164,"temp":76.3,"feels_like":72.14,"pressure":1003,"humidity":32,"dew_point":44.31,"uvi":10.68,"clouds":5,"wind_speed":5.01,"wind_deg":117,"wind_gust":11.01,"weather":[{"id":800,"main":"Clear","description":"clear
+      string: '{"lat":39.74,"lon":-104.99,"timezone":"America/Denver","timezone_offset":-21600,"current":{"dt":1592148319,"sunrise":1592134287,"sunset":1592188164,"temp":76.3,"feels_like":72.14,"pressure":1003,"humidity":32,"dew_point":44.31,"uvi":10.68,"clouds":5,"wind_speed":5.01,"wind_deg":117,"wind_gust":11.01,"weather":[{"id":800,"main":"Clear","description":"clear
         sky","icon":"01d"}]},"minutely":[{"dt":1592148360,"precipitation":0},{"dt":1592148420,"precipitation":0},{"dt":1592148480,"precipitation":0},{"dt":1592148540,"precipitation":0},{"dt":1592148600,"precipitation":0},{"dt":1592148660,"precipitation":0},{"dt":1592148720,"precipitation":0},{"dt":1592148780,"precipitation":0},{"dt":1592148840,"precipitation":0},{"dt":1592148900,"precipitation":0},{"dt":1592148960,"precipitation":0},{"dt":1592149020,"precipitation":0},{"dt":1592149080,"precipitation":0},{"dt":1592149140,"precipitation":0},{"dt":1592149200,"precipitation":0},{"dt":1592149260,"precipitation":0},{"dt":1592149320,"precipitation":0},{"dt":1592149380,"precipitation":0},{"dt":1592149440,"precipitation":0},{"dt":1592149500,"precipitation":0},{"dt":1592149560,"precipitation":0},{"dt":1592149620,"precipitation":0},{"dt":1592149680,"precipitation":0},{"dt":1592149740,"precipitation":0},{"dt":1592149800,"precipitation":0},{"dt":1592149860,"precipitation":0},{"dt":1592149920,"precipitation":0},{"dt":1592149980,"precipitation":0},{"dt":1592150040,"precipitation":0},{"dt":1592150100,"precipitation":0},{"dt":1592150160,"precipitation":0},{"dt":1592150220,"precipitation":0},{"dt":1592150280,"precipitation":0},{"dt":1592150340,"precipitation":0},{"dt":1592150400,"precipitation":0},{"dt":1592150460,"precipitation":0},{"dt":1592150520,"precipitation":0},{"dt":1592150580,"precipitation":0},{"dt":1592150640,"precipitation":0},{"dt":1592150700,"precipitation":0},{"dt":1592150760,"precipitation":0},{"dt":1592150820,"precipitation":0},{"dt":1592150880,"precipitation":0},{"dt":1592150940,"precipitation":0},{"dt":1592151000,"precipitation":0},{"dt":1592151060,"precipitation":0},{"dt":1592151120,"precipitation":0},{"dt":1592151180,"precipitation":0},{"dt":1592151240,"precipitation":0},{"dt":1592151300,"precipitation":0},{"dt":1592151360,"precipitation":0},{"dt":1592151420,"precipitation":0},{"dt":1592151480,"precipitation":0},{"dt":1592151540,"precipitation":0},{"dt":1592151600,"precipitation":0},{"dt":1592151660,"precipitation":0},{"dt":1592151720,"precipitation":0},{"dt":1592151780,"precipitation":0},{"dt":1592151840,"precipitation":0},{"dt":1592151900,"precipitation":0},{"dt":1592151960,"precipitation":0}],"hourly":[{"dt":1592146800,"temp":76.3,"feels_like":67.46,"pressure":1003,"humidity":32,"dew_point":44.31,"clouds":5,"wind_speed":13.33,"wind_deg":198,"weather":[{"id":800,"main":"Clear","description":"clear
         sky","icon":"01d"}]},{"dt":1592150400,"temp":78.62,"feels_like":66.9,"pressure":1006,"humidity":24,"dew_point":38.86,"clouds":5,"wind_speed":16.46,"wind_deg":209,"weather":[{"id":800,"main":"Clear","description":"clear
         sky","icon":"01d"}]},{"dt":1592154000,"temp":82.27,"feels_like":69.67,"pressure":1008,"humidity":18,"dew_point":34.59,"clouds":3,"wind_speed":16.71,"wind_deg":208,"weather":[{"id":800,"main":"Clear","description":"clear
@@ -207,5 +207,5 @@ http_interactions:
         clouds","icon":"02d"}],"clouds":11,"uvi":10.26},{"dt":1592679600,"sunrise":1592652724,"sunset":1592706673,"temp":{"day":76.93,"min":59.14,"max":76.93,"night":62.74,"eve":67.01,"morn":59.14},"feels_like":{"day":72.91,"night":58.17,"eve":61.92,"morn":53.91},"pressure":1014,"humidity":27,"dew_point":41.36,"wind_speed":3.31,"wind_deg":65,"weather":[{"id":501,"main":"Rain","description":"moderate
         rain","icon":"10d"}],"clouds":99,"rain":7.24,"uvi":10.24},{"dt":1592766000,"sunrise":1592739136,"sunset":1592793085,"temp":{"day":78.62,"min":61.74,"max":80.85,"night":67.05,"eve":79.3,"morn":61.74},"feels_like":{"day":69.57,"night":62.04,"eve":70,"morn":58.62},"pressure":1014,"humidity":21,"dew_point":35.55,"wind_speed":10.67,"wind_deg":34,"weather":[{"id":800,"main":"Clear","description":"clear
         sky","icon":"01d"}],"clouds":6,"uvi":10.39}]}'
-  recorded_at: Sun, 14 Jun 2020 15:26:22 GMT
+  recorded_at: Sun, 14 Jun 2020 15:32:12 GMT
 recorded_with: VCR 6.0.0

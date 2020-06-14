@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - openresty
       Date:
-      - Sun, 14 Jun 2020 15:26:19 GMT
+      - Sun, 14 Jun 2020 15:32:08 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -96,5 +96,5 @@ http_interactions:
         clouds","icon":"02d"}],"clouds":11,"uvi":10.26},{"dt":1592679600,"sunrise":1592652724,"sunset":1592706673,"temp":{"day":76.93,"min":59.14,"max":76.93,"night":62.74,"eve":67.01,"morn":59.14},"feels_like":{"day":72.91,"night":58.17,"eve":61.92,"morn":53.91},"pressure":1014,"humidity":27,"dew_point":41.36,"wind_speed":3.31,"wind_deg":65,"weather":[{"id":501,"main":"Rain","description":"moderate
         rain","icon":"10d"}],"clouds":99,"rain":7.24,"uvi":10.24},{"dt":1592766000,"sunrise":1592739136,"sunset":1592793085,"temp":{"day":78.62,"min":61.74,"max":80.85,"night":67.05,"eve":79.3,"morn":61.74},"feels_like":{"day":69.57,"night":62.04,"eve":70,"morn":58.62},"pressure":1014,"humidity":21,"dew_point":35.55,"wind_speed":10.67,"wind_deg":34,"weather":[{"id":800,"main":"Clear","description":"clear
         sky","icon":"01d"}],"clouds":6,"uvi":10.39}]}'
-  recorded_at: Sun, 14 Jun 2020 15:26:19 GMT
+  recorded_at: Sun, 14 Jun 2020 15:32:08 GMT
 recorded_with: VCR 6.0.0
