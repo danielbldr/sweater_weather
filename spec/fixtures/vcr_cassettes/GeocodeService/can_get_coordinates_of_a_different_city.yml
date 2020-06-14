@@ -1,0 +1,128 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/geocode/json?address=irvine,co&key=<GOOGLE_API>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Sun, 14 Jun 2020 15:44:58 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Vary:
+      - Accept-Language
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Goog-Maps-Metro-Area:
+      - Los Angeles, CA
+      Server:
+      - mafe
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=385
+      Alt-Svc:
+      - h3-27=":443"; ma=2592000,h3-25=":443"; ma=2592000,h3-T050=":443"; ma=2592000,h3-Q050=":443";
+        ma=2592000,h3-Q049=":443"; ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443";
+        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+           "results" : [
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "550",
+                       "short_name" : "550",
+                       "types" : [ "street_number" ]
+                    },
+                    {
+                       "long_name" : "Newport Center Drive",
+                       "short_name" : "Newport Center Dr",
+                       "types" : [ "route" ]
+                    },
+                    {
+                       "long_name" : "Newport Center",
+                       "short_name" : "Newport Center",
+                       "types" : [ "neighborhood", "political" ]
+                    },
+                    {
+                       "long_name" : "Newport Beach",
+                       "short_name" : "Newport Beach",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Orange County",
+                       "short_name" : "Orange County",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "California",
+                       "short_name" : "CA",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    },
+                    {
+                       "long_name" : "92660",
+                       "short_name" : "92660",
+                       "types" : [ "postal_code" ]
+                    }
+                 ],
+                 "formatted_address" : "550 Newport Center Dr, Newport Beach, CA 92660, USA",
+                 "geometry" : {
+                    "location" : {
+                       "lat" : 33.6168308,
+                       "lng" : -117.8715267
+                    },
+                    "location_type" : "ROOFTOP",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 33.61817978029149,
+                          "lng" : -117.8701777197085
+                       },
+                       "southwest" : {
+                          "lat" : 33.61548181970849,
+                          "lng" : -117.8728756802915
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJYb7M7oXg3IARcQjElQ7T_zc",
+                 "plus_code" : {
+                    "compound_code" : "J48H+P9 Newport Beach, CA, United States",
+                    "global_code" : "8554J48H+P9"
+                 },
+                 "types" : [ "establishment", "point_of_interest" ]
+              }
+           ],
+           "status" : "OK"
+        }
+  recorded_at: Sun, 14 Jun 2020 15:44:58 GMT
+recorded_with: VCR 6.0.0
