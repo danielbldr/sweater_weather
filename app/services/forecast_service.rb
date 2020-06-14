@@ -9,7 +9,7 @@ class ForecastService
   def get_arrival_forecast(lat, lon, time)
     forecast_info = get_forecast_info(lat, lon)
     index = to_hours(time)
-    forecast_info[:hourly][index]
+    forecast_info[:hourly][index-1]
   end
 
   private
@@ -21,7 +21,7 @@ class ForecastService
 
   def conn
     Faraday.new(url: 'https://api.openweathermap.org') do |f|
-      f.params['appid'] = 'f3fa19a39c077c30289cf9672ad2f599'
+      f.params['appid'] = ENV['OPEN_WEATHER_API']
     end
   end
 end
