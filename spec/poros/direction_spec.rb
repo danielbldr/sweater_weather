@@ -6,7 +6,7 @@ RSpec.describe Direction do
 
     direction = Direction.new(data)
 
-    expect(direction.travel_time).to eq("1 hour 48 mins")
-    expect(direction.seconds).to eq(6479)
+    expect(direction.travel_time.class).to eq(String)
+    expect(direction.seconds.class).to eq(Integer)
   end
 end

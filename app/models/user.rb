@@ -7,6 +7,7 @@ class User < ApplicationRecord
   before_create :set_api_key
 
   def set_api_key
-    self.api_key = SecureRandom.base58(24)
+    api_key = SecureRandom.base58(24)
+    User.find_by(api_key: api_key) ? set_api_key : self.api_key = api_key
   end
 end
