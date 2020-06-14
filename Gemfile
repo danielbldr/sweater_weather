@@ -29,7 +29,8 @@ gem 'faraday'
 gem 'figaro'
 gem 'unsplash'
 gem 'devise_token_auth'
-
+gem 'travis'
+# JSON web tokens
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
